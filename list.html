@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="noindex" name="robots" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <title>TechBank</title>
+    <link href="bootstrap/css/bootstrap-custom.css" rel="stylesheet" />
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <link href="dist/css/sweetalert-custom.css" rel="stylesheet" />
+    <link href="dist/css/jquery.dynatable.css" rel="stylesheet">
+    <link href="dist/css/spinner.css" rel="stylesheet" />
+    <link href="dist/css/dropzone.custom.css" rel="stylesheet" />
+    <link href="dist/css/style.css" rel="stylesheet" />
+  </head>
+  <body class="hold-transition skin-blue-light sidebar-mini fixed">
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a class="logo" href="index.html">
+          <span class="logo-mini">TechBank</span>
+          <span class="logo-lg">TechBank</span>
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a class="sidebar-toggle" data-toggle="offcanvas" href="#" role="button">
+            <span class="sr-only">トグルナビゲーション</span>
+          </a>
+
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown user user-menu">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="hidden-xs">株式会社セラク</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img class="img-circle" src="dist/img/icon-default.png" />
+                    <p>株式会社セラク</p>
+                  </li>
+                  <!-- Menu Body -->
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="text-center">
+                      <form method="post" action="/logout">
+                        <input class="btn btn-default btn-flat" type="submit" value="ログアウトする" /> 
+                        <input class="btn btn-default btn-flat" onClick="location.href='/reset-pass'" type="button" value="パスワード変更" />
+                      <input type="hidden" name="_csrf" value="addd3085-8191-488c-907e-fa85ebbd468d" /></form>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+	    
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img class="img-circle" src="dist/img/icon-default.png" />
+            </div>
+            
+            <div class="pull-left info">
+              <span id="account-name">株式会社セラク</span>
+            </div>
+          </div>
+          
+          <div id="mini-point"></div>
+          
+          <ul class="sidebar-menu">
+            <li class="header">管理者メニュー</li>
+            <li class="treeview">
+              <a href="list.html" id="list-user2"><i class="fa fa-list"></i> <span>メンバー一覧</span></a></li>
+              <li class="treeview"><a href="add.html"><i class="fa fa-user-plus"></i> <span>メンバー追加</span></a></li>
+            </ul> <!-- /admin menu -->
+           <!-- /regular menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+          <!-- Content Header (Page header) -->	
+　　　　   <section class="content-header">
+            <h1><i class="fa fa-user"></i> メンバー一覧</h1>
+          </section>
+
+          <ul class="row" id="ul-user">
+           <p id="sort-box">
+             <a id="sorting-clear">並び替えクリア</a>
+             <a id="sorting-name">五十音順 <span class="sort-caret"><i class="fa fa-caret-up sort-caret-icon"></i></span></a>
+             <a id="sorting-hireday">入社日順 <span class="sort-caret"><i class="fa fa-caret-up sort-caret-icon"></i></span></a>
+             <a id="sorting-birthday">生年月日順 <span class="sort-caret"><i class="fa fa-caret-up sort-caret-icon"></i></span></a>
+             <span id="description-division">部署で絞る</span>
+             <select id="query-division" name="division">
+               <option value=""></option>
+               <option value="ITI">ITI</option>
+               <option value="SMT">SMT</option>
+               <option value="WEB">WEB</option>
+             </select>
+           </p>
+
+           <!-- HTML例 -->
+           <li class="user-box col-md-2 col-sm-4 col-xs-12 text-center">
+            <div class="thumbnail">
+              <div class="thumbnail-image">
+                <img class="img-circle" src="dist/img/jinbutsu_male.jpg">
+              </div>
+              <div class="user-indicator"></div>
+              <div class="user-name">日比野定男</div>
+              <div class="user-division">WEB</div>
+              <div class="user-position">主査</div>
+              <div class="text-center"></div>
+            </div>
+          </li>
+          <!-- /HTML例 -->
+
+          <div id="loadarea"></div><!--/#loadarea-->
+        </ul>
+        
+        <div class="user-data"></div>
+          
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <span><a href="#" target="_blank">TechBank</a> ver2.0</span>
+        </div>
+        <span>&copy; 2019 <a href="https://seraku.co.jp" target="_blank">seraku inc.</a> All rights reserved.</span>
+      </footer>
+
+      <aside class="control-sidebar control-sidebar-dark">
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="control-sidebar-home-tab">
+          </div>
+        </div>
+      </aside>
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+    <!-- Libraries -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="dist/js/load.js"></script>
+    <!-- Initial Data -->
+    <input name="role" type="hidden" value="admin" />
+    <input name="token" type="hidden" value="dd6ee774-c8de-4601-ac4d-2adaace24c27" />
+    <input name="userId" type="hidden" value="1835" />
+    <input name="tAccountId" type="hidden" value="553" />
+</body></html>

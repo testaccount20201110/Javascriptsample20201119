@@ -1,0 +1,99 @@
+/*
+ * jQuery Dynatable plugin 0.3.1
+ *
+ * Copyright (c) 2014 Steve Schwartz (JangoSteve)
+ *
+ * Dual licensed under the AGPL and Proprietary licenses:
+ *   http://www.dynatable.com/license/
+ *
+ * Date: Tue Jan 02 2014
+ */
+th a {
+  color: black;
+}
+th a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.dynatable-search {
+  float: right;
+  margin: 20px;
+}
+
+.dynatable-per-page-label {
+  margin: 20px 0 20px 20px;
+  color: #5C5C5C;
+}
+
+.dynatable-per-page-select {
+  margin: 15px 0;
+  color: #5C5C5C;
+  padding: 1px 5px;
+  box-shadow: none;
+  background-color: #F4F4F4;
+  border: 1px #EAE4E4 solid;
+  border-radius: 3px;         /* CSS3 */
+  -moz-border-radius: 3px;    /* Firefox */
+  -webkit-border-radius: 3px; /* Safari,Chrome */
+}
+
+.dynatable-pagination-links {
+  float: right;
+}
+
+.dynatable-record-count {
+  display: block;
+  padding: 5px 0;
+  margin: 20px;
+  color: #5C5C5C;
+}
+
+.dynatable-pagination-links span,
+.dynatable-pagination-links li {
+  display: inline-block;
+}
+
+.dynatable-page-link,
+.dynatable-page-break {
+  display: block;
+  margin: 0 3px;
+}
+
+.dynatable-page-link {
+  cursor: pointer;
+  background: #ADADAD;
+  padding: 3px 10px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.dynatable-page-link:hover {
+  background: #8CD4F5;
+  color: #FFF;
+}
+
+.dynatable-active-page,
+.dynatable-disabled-page {
+  cursor: text;
+}
+
+.dynatable-active-page:hover,
+.dynatable-disabled-page:hover {
+  text-decoration: none;
+  background: #00B3EA;
+}
+
+.dynatable-active-page {
+  background: #00B3EA;
+  border-radius: 3px;
+  color: #fff;
+}
+.dynatable-active-page:hover {
+  color: #fff;
+}
+.dynatable-disabled-page,
+.dynatable-disabled-page:hover {
+  background: none;
+  color: #999;
+}

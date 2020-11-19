@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="noindex" name="robots" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <title>TechBank</title>
+    <link href="bootstrap/css/bootstrap-custom.css" rel="stylesheet" />
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <link href="dist/css/sweetalert-custom.css" rel="stylesheet" />
+    <link href="dist/css/jquery.dynatable.css" rel="stylesheet">
+    <link href="dist/css/spinner.css" rel="stylesheet" />
+    <link href="dist/css/dropzone.custom.css" rel="stylesheet" />
+    <link href="dist/css/style.css" rel="stylesheet" />
+  </head>
+  <body class="hold-transition skin-blue-light sidebar-mini fixed">
+    <div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+        <a class="logo" href="index.html">
+          <span class="logo-mini">TechBank</span>
+          <span class="logo-lg">TechBank</span>
+        </a>
+
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a class="sidebar-toggle" data-toggle="offcanvas" href="#" role="button">
+            <span class="sr-only">トグルナビゲーション</span>
+          </a>
+          <!-- Navbar Right Menu -->
+	  
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown user user-menu"> 
+		            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="hidden-xs">株式会社セラク</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img class="img-circle" src="dist/img/icon-default.png" />
+                    <p>株式会社セラク</p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body text-center">
+                    <span class="user-role"><i class="fa fa-user"></i><i class="fa fa-star"></i> 管理者アカウント</span>
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="text-center">
+                      <form method="post" action="/logout">
+                        <input class="btn btn-default btn-flat" type="submit" value="ログアウトする" /> 
+                        <input class="btn btn-default btn-flat" onClick="location.href='/reset-pass'" type="button" value="パスワード変更" />
+                      <input type="hidden" name="_csrf" value="addd3085-8191-488c-907e-fa85ebbd468d" />
+                    </form>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+	    
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img class="img-circle" src="dist/img/icon-default.png" />
+            </div>
+            <div class="pull-left info">
+              <span id="account-name">株式会社セラク</span>
+            </div>
+          </div>
+          <div id="mini-point"></div>
+	  
+          <ul class="sidebar-menu">
+            <li class="header">管理者メニュー</li>
+            <li class="treeview">
+              <a href="list.html" id="list-user2">
+                <i class="fa fa-list"></i> <span>メンバー一覧</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="add.html">
+                <i class="fa fa-user-plus"></i> <span>メンバー追加</span>
+              </a>
+            </li>
+          </ul> <!-- /admin menu -->
+           <!-- /regular menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content">
+          <!-- Content Header (Page header) -->	
+　　　　   <section class="content-header">
+            <h1><i class="fa fa-user-plus"></i> メンバー追加</h1>
+          </section>
+          
+          <div class="box box-default">
+              <div class="progress progress-xs progress-striped active">
+                <div class="progress-bar progress-bar-primary" style="width: 100%"></div>
+              </div>
+              <div class="box-header with-border">
+                <h3 class="box-title"><i class="fa fa-circle-o-notch text-light-blue"></i> メンバー追加</h3>
+              </div><!-- /.box-header -->
+              <div id="add-user-form-form-box" class="box-body">
+                <form id="add-user-form-form" role="form">
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">メールアドレス</label>
+                      <input type="text" class="form-control text-input email" name="email" placeholder="例）example@example.jp">
+                      <span class="error_email"></span>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <label class="label label-default">姓（漢字）<span class="text-red"> ※</span></label>
+                        <input type="text" class="form-control text-input required" name="lastName" placeholder="例）山田">
+                        <span class="error_required"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">名（漢字）<span class="text-red"> ※</span></label>
+                      <input type="text" class="form-control text-input required" name="firstName" placeholder="例）太郎">
+                      <span class="error_required"></span>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">せい（ふりがな）</label>
+                      <input type="text" class="form-control text-input kana" name="lastKana" placeholder="例）やまだ" id="form-validation-field-0">
+                      <span class="error_kana"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">めい（ふりがな）</label>
+                      <input type="text" class="form-control text-input kana" name="firstKana" placeholder="例）たろう">
+                      <span class="error_kana"></span>
+                    </div>
+                  </div>
+      
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">社員番号</label>
+                      <input type="text" class="form-control text-input" name="number" placeholder="例）s-1001">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">性別</label>
+                      <select class="form-control" name="gender">
+                        <option value="">選択してください</option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">住所</label>
+                      <input id="tags" class="form-control max50" name="address" placeholder="例）107-0052 東京都港区赤坂2-16-6" type="text">
+                      <span class="error_num"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">生年月日</label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input class="form-control datepicker" name="birthday" type="text">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">最寄駅</label>
+                      <input type="text" class="form-control text-input" name="station" placeholder="例）東京メトロ赤坂駅">
+                      <span class="error_required"></span>
+                      <span class="error_name"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">最終学歴</label>
+                      <input type="text" class="form-control text-input" name="education" placeholder="例）芝浦専門学校">
+                      <span class="error_required"></span>
+                      <span class="error_name"></span>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">雇用形態</label>
+                      <input type="text" class="form-control text-input" name="type" placeholder="例）正社員">
+                      <span class="error_required"></span>
+                      <span class="error_name"></span>
+                    </div>
+                      <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <label class="label label-default">部署</label>
+                          <input type="text" class="form-control text-input" name="division" placeholder="例）情報システム部開発チーム">
+                          <span class="error_required"></span>
+                          <span class="error_name"></span>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">役職</label>
+                      <input type="text" class="form-control text-input" name="position" placeholder="例）主任">
+                      <span class="error_required"></span>
+                      <span class="error_name"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">入社日</label>
+                      <div class="input-group">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input class="form-control datepicker" name="hireday" type="text">
+                        <span class="error_required"></span>
+                        <span class="error_name"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                      <label class="label label-default">連絡先</label>
+                      <input type="text" class="form-control text-input phone" name="contact" placeholder="090-0000-0000">
+                      <span class="error_required"></span>
+                      <span class="error_phone"></span>
+                    </div>
+                  </div>
+                    
+                  <a href="#add-user-form-submit"></a>
+                  <button type="submit" id="add-user-form-submit" class="btn btn-primary">メンバーを追加する</button>
+                </form>		    
+              </div><!-- /.box-body -->
+            </div>
+
+          <div class="user-data"></div>
+          
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          <span><a href="#" target="_blank">TechBank</a> ver2.0</span>
+        </div>
+        <span>&copy; 2019 <a href="https://seraku.co.jp" target="_blank">seraku inc.</a> All rights reserved.</span>
+      </footer>
+
+      <aside class="control-sidebar control-sidebar-dark">
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="control-sidebar-home-tab">
+          </div>
+        </div>
+      </aside>
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+    
+    <!-- Libraries -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="dist/js/validation.js"></script>
+    <!-- Initial Data -->
+    <input name="role" type="hidden" value="admin" />
+    <input name="token" type="hidden" value="dd6ee774-c8de-4601-ac4d-2adaace24c27" />
+    <input name="userId" type="hidden" value="1835" />
+    <input name="tAccountId" type="hidden" value="553" />
+</body></html>
