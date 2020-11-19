@@ -1,0 +1,352 @@
+<!--お約束--------------------------------------------->
+
+<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN” “http://www.w3.org/TR/html4/loose.dtd”> 
+<html lang="ja">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>セラク銀行</title>
+<link rel="stylesheet"href="css/style.css">
+
+<!--js----------------------------------------------->
+    
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/seraku.js"></script>
+    
+<!--body--------------------------------------------->
+    
+<body>
+<div id="changeArea">
+    
+<!--ヘッダー------------------------------------------->
+
+<header id="top">
+    <h1><img src="images/logo.png"alt="セラク銀行"></h1>
+    <div id="ser">
+        <div id="eigo">
+            <a><img src="images/globalsite.png" onmouseover="this.src='images/globalsite_hover.png'" onmouseout="this.src='images/globalsite.png'"></a>
+            <p>|</p>
+            <a><img src="images/sitemap.png" onmouseover="this.src='images/sitemap_hover.png'" onmouseout="this.src='images/sitemap.png'"></a>
+        </div>
+        <div id="kensaku">
+            <form action="cgi-bin/example.cgi" method="post">
+                <input type="search" name="search" id="box" placeholder="検索ワードを入力">
+                <input type="image" src="images/search_btn.png" name="submit" id="botan" value="検索">
+            </form>
+        </div>
+    </div>
+    <div id="moji">文字の大きさが変更できます
+        <div id="textsize">
+            <div id="syou" onclick="fontSize(this.id);"></div>
+            <div id="tyuu" onclick="fontSize(this.id);"></div>
+            <div id="dai" onclick="fontSize(this.id);"></div>
+        </div>
+    </div>
+    <div id="kin">
+        <img src="images/bank_code.png">
+    </div>
+</header>
+
+<!--nav----------------------------------------------->
+    
+<nav>
+    <ul>
+        <li id="nav_1"></li>
+        <li id="nav_2"></li>
+        <li id="nav_3"></li>
+        <li id="nav_4"></li>
+        <li id="nav_5"></li>
+    </ul>
+</nav>
+
+<!--コンテンツスタート------------------------------------>
+<div id="hu">
+    <div id="hitomatome">
+
+<!--トップ写真まわり---------------------------------------->
+        <div id="contents">
+            <div id="main">
+                <div id=slide_div>
+                    <div id="graphic">
+                        <img src="images/new1.jpg">
+                        <img src="images/new2.jpg">
+                        <img src="images/new3.jpg">
+                    </div>
+
+                    <div id="subgraphic">
+                        <p id="change1"><a href="#"><img src="images/thum_1.jpg"></a></p>
+                        <p id="change2"><a href="#"><img src="images/thum_2.jpg"></a></p>
+                        <p id="change3"><a href="#"><img src="images/thum_3.jpg"></a></p>
+                    </div>
+                </div>
+
+<!--コンテンツ------------------------------------------->
+
+            <div id="list">
+                    <div id="list1">
+                        <h5>個人のお客様</h5>
+                        <div id="list11">
+                            <li>口座をひらく</li>
+                            <li>住宅ローン</li>
+                            <li>投資信託</li>
+                        </div>
+                        <div id="list12">
+                            <li>外貨預金</li>
+                            <li>バンクイック</li>
+                            <li>キャンペーン一覧</li>
+                        </div>
+                    </div>
+                    <div id="list2">
+                        <h5>法人のお客様</h5>
+                        <div id="list21">
+                            <li>口座をひらく</li>
+                            <li>でんざい</li>
+                            <li>CSRの取り組み</li>
+                        </div>
+                        <div id="list22">
+                            <li>地球環境問題への対応</li>
+                            <li>地域社会への貢献</li>
+                            <li>Global website</li>
+                        </div>
+                    </div>
+                    <div id="list3">
+                        <h5>株主・投資家の皆様</h5>
+                        <div id="list31">
+                            <li>決算広告</li>
+                            <li>社債情報</li>
+                        </div>
+                    </div>
+                    <div id="list4">
+                        <h5>採用情報</h5>
+                        <div id="list41">
+                            <li>新卒採用</li>
+                            <li>中途採用</li>
+                            <li>海外現地採用</li>
+                        </div>
+                    </div>
+                </div>
+                <ul class="tab">
+                    <li class="select" id="tab1">
+                        <img src="images/tab01_off.png"
+                             onmouseover="this.src='images/tab01.png'" onmouseout="this.src='images/tab01_off.png'"/></li>
+                    <li id="tab2"><img src="images/tab02_off.png"
+                             onmouseover="this.src='images/tab02.png'" onmouseout="this.src='images/tab02_off.png'" /></li>
+                    <li id="tab3"><img src="images/tab03_off.png"
+                             onmouseover="this.src='images/tab03.png'" onmouseout="this.src='images/tab03_off.png'"/></li>
+                    <li id="tab4"><img src="images/tab04_off.png"
+                             onmouseover="this.src='images/tab04.png'" onmouseout="this.src='images/tab04_off.png'"/></li>
+                </ul>
+                <ul class="content">
+                    <li>
+                        <div id="info1">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext1">【インターネットバンキング】パスワード等を入力させる偽メールが届いても、絶対に入力しないでください！</div>
+                        </div>
+                        <div id="info2">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_08.png"></div>
+                            <div id="infotext2">抽選で200人に一万円が当たる!夏の資産運用キャンペーン実施中!</div>
+                        </div>
+                        <div id="info3">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_08.png"></div>
+                            <div id="infotext3">平成27年5月25日(月)より「子ども口座開設キャンペーン」を開始します。</div>
+                        </div>
+                        <div id="info4">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext4">「年金情報流出」を口実にした振り込め詐欺や個人情報の詐欺にご注意下さい。</div>
+                        </div>
+                        <div id="info5">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_07.png"></div>
+                            <div id="infotext5">スウェーデンせらく銀行○○支店開業について    pdf(97KB)</div>
+                        </div>
+                        <div id="info6">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext6">お客様情報のSRKグループでの共同利用について</div>
+                        </div>
+                        <div id="info7">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext7">【インターネットバンキング】LINE公式アカウントを解説しました!</div>
+                        </div>
+                        <div id="info8">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_07.png"></div>
+                            <div id="infotext8">【せらくダイレクト】ワンタイムパスワードカードの提供開始について pdf(130KB)</div>
+                        </div>
+                        <div id="info9">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_08.png"></div>
+                            <div id="infotext9">抽選でカタログギフトが当たる！保険の見直しキャンペーン実施中</div>
+                        </div>
+                        
+                    </li>
+                    <li class="hide">
+                        <div id="info5">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_07.png"></div>
+                            <div id="infotext5">スウェーデンせらく銀行○○支店開業について    pdf(97KB)</div>
+                        </div>
+                        <div id="info8">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_07.png"></div>
+                            <div id="infotext8">【せらくダイレクト】ワンタイムパスワードカードの提供開始について pdf(130KB)</div>
+                        </div>
+                    </li>
+                    <li class="hide">
+                        <div id="info2">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_08.png"></div>
+                            <div id="infotext2">抽選で200人に一万円が当たる!夏の資産運用キャンペーン実施中!</div>
+                        </div>
+                        <div id="info3">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_08.png"></div>
+                            <div id="infotext3">平成27年5月25日(月)より「子ども口座開設キャンペーン」を開始します。</div>
+                        </div>
+                        <div id="info9">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_08.png"></div>
+                            <div id="infotext9">抽選でカタログギフトが当たる！保険の見直しキャンペーン実施中</div>
+                        </div>
+                    </li>
+                    <li class="hide">
+                        <div id="info1">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext1">【インターネットバンキング】パスワード等を入力させる偽メールが届いても、絶対に入力しないでください！</div>
+                        </div>
+                        <div id="info4">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext4">「年金情報流出」を口実にした振り込め詐欺や個人情報の詐欺にご注意下さい。</div>
+                        </div>
+                        <div id="info6">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext6">お客様情報のSRKグループでの共同利用について</div>
+                        </div>
+                        <div id="info7">
+                            <div class="time">2015年06月10日</div>
+                            <div><img src="images/category_09.png"></div>
+                            <div id="infotext7">【インターネットバンキング】LINE公式アカウントを解説しました!</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+<!--さぶぅ------------------------------------------------>
+
+            <div id="sub">
+                <aside>
+                    <div id="inba">
+                        <h3>インターネットバンキング</h3>
+                        <div>
+                            <h5>せらく銀行インターネットバンキング</h5>
+                            <div id="login1"><img src="images/login_01.png"></div>
+                            <div id="login2"><img src="images/login_02.png"></div>  
+                            <h6>パスワードを忘れた方</h6>
+                        </div>
+                    </div>
+                    <div id="sur">
+                        <h3>サービスのご案内</h3>
+                            <p>
+                                <dt><img src="images/annai_01.png" onmouseover="this.src='images/annnai_01.png'" onmouseout="this.src='images/annai_01.png'"></dt>
+                                <dt><img src="images/annai_02.png" onmouseover="this.src='images/annnai_02.png'" onmouseout="this.src='images/annai_02.png'"></dt>
+                                <dt><img src="images/annai_03.png" onmouseover="this.src='images/annnai_03.png'" onmouseout="this.src='images/annai_03.png'"></dt>
+                                <dt><img src="images/annai_04.png" onmouseover="this.src='images/annnai_04.png'" onmouseout="this.src='images/annai_04.png'"></dt>
+                                <dt><img src="images/annai_05.png" onmouseover="this.src='images/annnai_05.png'" onmouseout="this.src='images/annai_05.png'"></dt>
+                                <dt><img src="images/annai_06.png" onmouseover="this.src='images/annnai_06.png'" onmouseout="this.src='images/annai_06.png'"></dt>
+                            </p>
+                    </div>
+                    <div id="sonota">
+                        <dt><img src="images/banner_01.png"></dt>
+                        <dt><img src="images/banner_02.png"></dt>
+                        <dt><img src="images/banner_03.png"></dt>
+                        <dt><img src="images/banner_02_01.png"></dt>
+                        <dt><img src="images/banner_02_02.png"></dt>
+                        <dt><img src="images/banner_02_03.png"></dt>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!--フッター-------------------------------------------->
+    
+<footer>
+    <div id="ftext">
+        <ul id="f1">
+            <h1>個人のお客様</h1>
+                    <li>普通預金</li>
+                    <li>定期預金・積立</li>
+                    <li>外貨預金</li>
+                    <li>外債</li>
+                    <li>ファンドラップ</li>
+                    <li>個人向け国債</li>
+                    <li>退職金運用のご案内</li>
+        </ul>
+
+        <ul id="f2">
+            <h1>法人のお客様</h1>
+                    <li>資金調達</li>
+                    <li>国際業務・為替取引</li>
+                    <li>福利厚生</li>
+                    <li>事業戦略・経営相談</li>
+                    <li>振込み・入金確認の効率化</li>
+                    <li>電子記録債権・手形関連</li>
+        </ul>
+
+        <ul id="f3">
+            <h1>株主・投資家の皆様</h1>
+                    <li>せらくグループの概要</li>
+                    <li>決算広告</li>
+                    <li>社債情報</li>
+        </ul>
+
+        <ul id="f4">
+            <h1>採用情報</h1>
+                    <li>新卒採用</li>
+                    <li>キャリア採用</li>
+                    <li>海外現地採用</li>
+                    <li>契約社員のお仕事</li>
+                    <li>派遣社員のお仕事</li>
+        </ul>
+
+        <ul id="f5">
+            <h1>せらく銀行について</h1>
+
+                    <li>ご挨拶</li>
+                    <li>事業内容</li>
+                    <li>企業の社会的責任</li>
+                    <li>役員一覧</li>
+                    <li>組織体制</li>
+                    <li>お問い合わせ先</li>
+        </ul>
+    </div>
+    <div id="hai">
+        <div id="fmoji">
+            <p id="fa">|</p>
+            <p id="fu1">お客様の個人情報所得について</p>
+            <p id="fb">|</p>
+            <p id="fu2">金融商品勧誘方針</p>
+            <p id="fc">|</p>
+            <p id="fu3">法人等のお客様の情報について</p>
+            <p id="fd">|</p>
+            <p id="fu4">本サイトのご利用に当たって</p>
+            <p id="fe">|</p>
+            <p id="fu5">反社会的勢力に対する基本方針</p>
+            <p id="ff">|</p>
+        </div>
+    </div>
+    <p id="copyright">
+        <small>Copyright(c)2015 Seraku Banking Corporation. ALL rights reserved.</small>
+    </p>
+</footer>
+
+<!--おしまい-------------------------------------------->
+</div>
+</body>
+</html>
